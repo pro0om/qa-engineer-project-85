@@ -18,4 +18,4 @@ non-functional:
   - Сайт должен быть доступен на различных устройствах
   
 implicit:
-  - При создании своего турнира в разделах(Elementary, Easy, Medium, Hard,, Players limit, Match timeout sec, Break duration sec) сделать изначально показанный лимит для ввода параметров
+  - При создании своего турнира в разделах(Elementary, Easy, Medium, Hard, Match timeout sec, Break duration sec) сделать изначально показанный лимит для ввода параметров
