@@ -20,7 +20,7 @@
   requirement: |
     При неправильном логине или пароле пользователь должен получить сообщение об ошибке
   prerequisites:
-    Открыта страница https://codebattle.hexlet.io/
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Логин = pro0o Пароль = QwertY123 email = neruski@hot.ee
   steps:
@@ -37,7 +37,7 @@
   requirement: |
     При верном вводе логине и пароля пользователь должен войти в систему
   prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Тестовые данные
     Логин = neruski@hot.ee Пароль = QwertY123
@@ -49,11 +49,26 @@
     Пользователь должен попасть на главную страницу
 
 - summary: |
+    Проверка выхода пользователя со своего аккаунта
+  requirement: |
+    При нажатии на кнопку "Sign Out" пользователь должен выйти со своего аккаунта  
+  prerequisites: |
+    Произведен вход на аккаунт
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+  test-data: |
+    кнопка "Sign Out"
+  steps:
+    - Нажимаем на свой ник (В правом верхнем углу)
+    - Нажимаем "Sign Out"
+  expected-result: |
+    Пользователь должен попасть на главную страницу до авторизации
+
+- summary: |
     Проверка входа пользователя с несуществующими логином и паролем
   requirement: |
     При неправильном логине или пароле пользователь должен получить сообщение об ошибке
   prerequisites:
-    Открыта страница https://codebattle.hexlet.io/
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Логин = pro@hot.ee Пароль = qwerty
   steps:
@@ -68,7 +83,7 @@
   requirement: |
     При нажатии на кнопку "Sing in with GitHub" должен зайти на зайт с этим аккаунтом
   prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Кнопка "Sing in with GitHub"
   steps: 
@@ -81,7 +96,7 @@
   requirement: |
     При нажатии на кнопку "Sing in with Discord" должен зайти на зайт с этим аккаунтом
   prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Кнопка "Sing in with Discord"
   steps:
@@ -94,7 +109,7 @@
   requirement: |
     При нажатии на кнопку "Try simple battle" должен запуститься бой с комьютером
   prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Кнопка "Try simple battle"
   steps:
@@ -107,7 +122,7 @@
   requirement: |
     При нажатии на логотип "Codebattle by Hexlet's community" должен выйти на главную страницу сайта
   prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Логотип "Codebattle by Hexlet's community"
   steps:
@@ -121,8 +136,8 @@
   requirement: |
     При нажатии на кнопки "WEEK/MONTH/ALL" должно сортироваться лидерство по недели/месяцу/общей
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     кнопки "WEEK/MONTH/ALL"
   steps:
@@ -137,8 +152,8 @@
   requirement: |
     При нажатии на кнопку "TOP list" должно перевести на страницу лидеров
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     кнопки "TOP list"
   steps:
@@ -152,8 +167,8 @@
     Когда ставишь галочку на "With bots"  должны в списке лидерства появляться боты, а при удалении галочки 
     должен оставаться список только с пользователями
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     фильтрация "With bots"
   steps:
@@ -168,8 +183,8 @@
   requirement: |
     При нажатии на кнопки из списка "20/30/40/50" должно выдавать список лидеров по этому кол-ву
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     кнопки из списка "20/30/40/50"
   steps:
@@ -187,8 +202,8 @@
     При нажатии на кнопки "Joined" должен сортироваться список от последней даты регистрации к первой,
     при нажатии 2ой раз, должен сортировать от первой к последней
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     кнопка "Joined"
   steps:
@@ -204,8 +219,8 @@
     При нажатии на кнопки "Games played" должен сортироваться список от наименьшего кол-ва проведенных игр к наибольшему,
     при нажатии 2ой раз, должен сортировать в обратную сторону
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     кнопка "Games played"
   steps:
@@ -222,8 +237,8 @@
     При нажатии на кнопки "Rating" должен сортироваться список от наименьшего рейтинга к наибольшему,
     при нажатии 2ой раз, должен сортировать в обратную сторону
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     кнопка "Rating"
   steps:
@@ -240,8 +255,8 @@
     При нажатии на кнопки "Rank" должен сортироваться список от первого места к последнему,
     при нажатии 2ой раз, должен сортировать в обратную сторону
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     кнопка "Rank"
   steps:
@@ -257,8 +272,8 @@
   requirement: |
     При введении конкретного ника должен найти именно его
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     Поиск ника pro0om
   steps:
@@ -272,8 +287,8 @@
   requirement: |
     При введении 3 букв ника должен выдавать список ников, которые содержат эти буквы
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     Поиск "pro"
   steps:
@@ -288,8 +303,8 @@
     При нажатии на логотип "GitHub" , который находится справа в списке лидеров у каждого учасника,
     должно перейти на личную страницу его владельца
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     логотип "GitHub"
   steps:
@@ -303,8 +318,8 @@
   requirement: |
     При нажатии на кнопку ">>" должен перекинуть на последнюю страницу учасников
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     Кнопка ">>"
   steps:
@@ -318,8 +333,8 @@
   requirement: |
     При нажатии на кнопку "<<" должен перекинуть на первую страницу учасников
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     Кнопка "<<"
   steps:
@@ -334,8 +349,8 @@
   requirement: |
     При нажатии на аккаунт "pro0om" должен перекинуть на его личную страницу статистики
   prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
-    Открыта страница https://codebattle.hexlet.io/
   test-data: |
     аккаунт "pro0om"
   steps:
@@ -344,3 +359,107 @@
     - Нажимаем на ссылку аккаунта "pro0om"
   expected-result: |
     Должен перейти на страницу "My Profile" аккаунта "pro0om"
+
+ - summary: |
+    Проверка возможности попасть в "My Profily" 
+  requirement: |
+    При нажатии "My Profily" должен перейти на профиль аккаунт
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    кнопка "My Profily"
+  steps:
+    - Нажимаем на свой ник (В правом верхнем углу)
+    - Нажимаем "My Profily"
+  expected-result: |
+    Должен перейти на страницу "My Profile" аккаунта 
+
+- summary: |
+    Проверка возможности попасть в "Settings" 
+  requirement: |
+    При нажатии "Settings" должен перейти на настроики аккаунта
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    кнопка "Settings"
+  steps:
+    - Нажимаем на свой ник (В правом верхнем углу)
+    - Нажимаем "Settings"
+  expected-result: |
+    Должен перейти на страницу "Settings" аккаунта 
+
+- summary: |
+    Проверка возможности попасть в "Users rating" 
+  requirement: |
+    При нажатии "Users rating" должен перейти на страницу рейтинга 
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    кнопка "Users rating"
+  steps:
+    - Нажимаем на свой ник (В правом верхнем углу)
+    - Нажимаем "Users rating"
+  expected-result: |
+    Должен перейти на страницу "Users rating" 
+
+- summary: |
+    Проверка возможности попасть в "Tasks" 
+  requirement: |
+    При нажатии "Tasks" должен перейти на страницу с заданиями 
+  prerequisites: |
+     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    кнопка "Tasks"
+  steps:
+    - Нажимаем на свой ник (В правом верхнем углу)
+    - Нажимаем "Tasks"
+  expected-result: |
+    Должен перейти на страницу "Tasks" 
+
+- summary: |
+    Проверка возможности попасть в "Tournaments" 
+  requirement: |
+    При нажатии "Tournaments" должен перейти на страницу со списком предстоящих/прошедших турниров и возможностью создать свой
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    кнопка "Tournaments"
+  steps:
+    - Нажимаем на свой ник (В правом верхнем углу)
+    - Нажимаем "Tournaments"
+  expected-result: |
+    Должен перейти на страницу "Tournaments" 
+
+- summary: |
+    Проверка возможности попасть в "Tournaments" 
+  requirement: |
+    При нажатии "Tournaments" должен перейти на страницу со списком предстоящих/прошедших турниров
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    кнопка "Tournaments"
+  steps:
+    - Нажимаем "Tournaments"
+  expected-result: |
+    Должен выдать список предстоящих и завершенных туриниров
+    
+- summary: |
+    Проверка возможности попасть на список завершенных игр "Completed games"
+  requirement: |
+    При нажатии "Tournaments" должен перейти на страницу со списком предстоящих/прошедших турниров
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    кнопка "Completed games"
+  steps:
+    - Нажимаем "Completed gamess"
+  expected-result: |
+    Должен выдать спиоск завершенных игр
+
