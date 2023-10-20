@@ -1081,20 +1081,112 @@
     - Дата "20.03.2019 15:15"
     - Кнопка "Create"
   expected-result: |
-    Должен предупредить, что турнир должен проходить в будущем и не создать его
+    Должен предупредить, что турнир должен проходить в будущем и не создавать его
 
 - summary: |
-   Проверить возможномть создавать турнир в прошлом
+   Проверить границы "Elementary"
   requirement: |
-   При создании турнира в прошлом должен не разрешить это сделать
+   При создании турнира в параметрах "Task provider" -> "Elementary" вводя не разрешенные значения
   prerequisites: |
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
     Открыт раздел "Create a new tournament"
   test-data: |
-    Раздел "Starts at (Europe/Tallinn)"
+    Раздел "Elementary"
   steps: |
-    - Дата "20.03.2019 15:15"
+    - Ввести " 0 "
+    - Кнопка "Create"
+    - Ввести " 1001 "
     - Кнопка "Create"
   expected-result: |
-    Должен предупредить, что турнир должен проходить в будущем и не создать его
+    Должен предупредить, что значение должно быть больше или равно 1 или меньше или равно 1000 и не создавать его
+
+- summary: |
+   Проверить границы "Easy"
+  requirement: |
+   При создании турнира в параметрах "Task provider" -> "Easy" вводя не разрешенные значения
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Create a new tournament"
+  test-data: |
+    Раздел "Easy"
+  steps: |
+    - Ввести " 0 "
+    - Кнопка "Create"
+    - Ввести " 1001 "
+    - Кнопка "Create"
+  expected-result: |
+    Должен предупредить, что значение должно быть больше или равно 1 или меньше или равно 1000 и не создавать его 
+
+- summary: |
+   Проверить границы "Medium"
+  requirement: |
+   При создании турнира в параметрах "Task provider" -> "Medium" вводя не разрешенные значения
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Create a new tournament"
+  test-data: |
+    Раздел "Medium"
+  steps: |
+    - Ввести " 0 "
+    - Кнопка "Create"
+    - Ввести " 1001 "
+    - Кнопка "Create"
+  expected-result: |
+    Должен предупредить, что значение должно быть больше или равно 1 или меньше или равно 1000 и не создавать его
+
+- summary: |
+   Проверить границы "Hard"
+  requirement: |
+   При создании турнира в параметрах "Task provider" -> "Hard" вводя не разрешенные значения
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Create a new tournament"
+  test-data: |
+    Раздел "Hard"
+  steps: |
+    - Ввести " 0 "
+    - Кнопка "Create"
+    - Ввести " 1001 "
+    - Кнопка "Create"
+  expected-result: |
+    Должен предупредить, что значение должно быть больше или равно 1 или меньше или равно 1000 и не создавать его
+
+- summary: |
+   Проверить границы "Match timeout sec"
+  requirement: |
+   При создании турнира в  "Match timeout sec" вводя не разрешенные значения
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Create a new tournament"
+  test-data: |
+    Раздел "Match timeout sec"
+  steps: |
+    - Ввести " 10 "
+    - Кнопка "Create"
+    - Ввести " 1001 "
+    - Кнопка "Create"
+  expected-result: |
+    Должен предупредить, что значение должно быть больше или равно 15, или меньше или равно 1000 и не создавать его
+
+- summary: |
+   Проверить границы "Break duration sec"
+  requirement: |
+   При создании турнира в  "Break duration sec" вводя не разрешенные значения
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Create a new tournament"
+  test-data: |
+    Раздел "Break duration sec"
+  steps: |
+    - Ввести " 0 "
+    - Кнопка "Create"
+    - Ввести " 358 "
+    - Кнопка "Create"
+  expected-result: |
+    Должен предупредить, что значение должно быть больше или равно 0, или меньше или равно 357 и не создавать его
