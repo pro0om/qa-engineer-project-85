@@ -368,7 +368,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
   test-data: |
-    кнопка "My Profily"
+    Кнопка "My Profily"
   steps:
     - Нажимаем на свой ник (В правом верхнем углу)
     - Нажимаем "My Profily"
@@ -383,7 +383,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
   test-data: |
-    кнопка "Settings"
+    Кнопка "Settings"
   steps:
     - Нажимаем на свой ник (В правом верхнем углу)
     - Нажимаем "Settings"
@@ -398,7 +398,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
   test-data: |
-    кнопка "Users rating"
+    Кнопка "Users rating"
   steps:
     - Нажимаем на свой ник (В правом верхнем углу)
     - Нажимаем "Users rating"
@@ -413,7 +413,7 @@
      Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
   test-data: |
-    кнопка "Tasks"
+    Кнопка "Tasks"
   steps:
     - Нажимаем на свой ник (В правом верхнем углу)
     - Нажимаем "Tasks"
@@ -428,7 +428,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
   test-data: |
-    кнопка "Tournaments"
+    Кнопка "Tournaments"
   steps:
     - Нажимаем на свой ник (В правом верхнем углу)
     - Нажимаем "Tournaments"
@@ -443,7 +443,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
   test-data: |
-    кнопка "Tournaments"
+    Кнопка "Tournaments"
   steps:
     - Нажимаем "Tournaments"
   expected-result: |
@@ -452,14 +452,649 @@
 - summary: |
     Проверка возможности попасть на список завершенных игр "Completed games"
   requirement: |
-    При нажатии "Tournaments" должен перейти на страницу со списком предстоящих/прошедших турниров
+    При нажатии "Completed games" должен перейти на страницу со списком предстоящих/прошедших турниров
   prerequisites: |
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
   test-data: |
-    кнопка "Completed games"
+    Кнопка "Completed games"
   steps:
-    - Нажимаем "Completed gamess"
+    - Нажимаем "Completed games"
   expected-result: |
-    Должен выдать спиоск завершенных игр
+    Должен выдать список завершенных игр
 
+- summary: |
+    Проверка возможности попасть на список игр ожидающих сопрника для битвы
+  requirement: |
+    При нажатии "Lobby" должен появиться список ожидающих соперников для сражения 
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    Кнопка "Lobby"
+  steps:
+    - Нажимаем "Lobby"
+  expected-result: |
+    Должен выдать список зожидающих соперников для сражения 
+
+- summary: |
+    Проверка возможности начать битву с соперником
+  requirement: |
+    При нажатии "Fight" должен начаться поединок с выбранным соперником
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    кнопка "Fight"
+  steps:
+    - Нажимаем "Fight"
+  expected-result: |
+    Должен начаться поединок с выбранным соперником
+    
+- summary: |
+    Проверка возможности перевести задачу на другой язык
+  requirement: |
+    При выборе языка "RU" из списка, должен перевести задачу на русский 
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "RU"
+  steps:
+    - Выбираем "RU"
+  expected-result: |
+    Должен перевести задачу на русския язык
+
+- summary: |
+    Проверка возможности показать руководство
+  requirement: |
+    При нажатии  "Show guide" должен выдать пошаговое ознакомление со страницей для поединка
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Show guide"
+  steps:
+    - Кнопка "Show guide"
+  expected-result: |
+    Должен выдать пошаговое ознакомление со страницей для поединка
+
+- summary: |
+    Проверка возможности менять язык программирования для поединка
+  requirement: |
+    При выборе языка программирования из списка должен менять его в окне для работы в написании кода
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Список языков программирования
+  steps:
+    - Из списка нажать "C#"
+    - Из списка нажать "Java 20"
+    - Из списка нажать "Python 3.11.4"
+  expected-result: |
+    Должен выдавать выбранные языки для работы в написании кода
+
+- summary: |
+    Проверка возможности менять менять фон на окне написания кода 
+  requirement: |
+    При выборе "Light" окно для написания кода должно стать с белым фоном
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Light"
+  steps:
+    - Кнопка "Light"
+  expected-result: |
+    Должен поменяться фон на окне для написания кода на белый
+
+- summary: |
+    Проверка возможности менять менять фон на окне написания кода 
+  requirement: |
+    При выборе "Dark" окно для написания кода должно стать с черным фоном
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Dark"
+  steps:
+    - Кнопка "Dark"
+  expected-result: |
+    Должен поменяться фон на окне для написания кода на черный
+
+- summary: |
+    Проверка возможности сдаться сопернику 
+  requirement: |
+    При выборе кнопки "Give up" (флашка) должно появиться окно с поддверждением для завершения игры
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Give up"
+  steps:
+    - Кнопка флажок
+    - Кнопка "Give up"
+  expected-result: |
+    Должена завершиться игра и всплыть окно с поддверждением, что ты проиграл
+    
+- summary: |
+    Проверка закрытия всплывающего окна посе завершения матча
+  requirement: |
+    При выборе кнопки "I'll be back" должно закрыться окно
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Give up"
+  steps:
+    - Кнопка флажок
+    - Кнопка "Give up"
+    - Кнопка "I'll be back"
+  expected-result: |
+    Должено закрыться окно поддверждающее поражение
+
+- summary: |
+    Проверка закрытия всплывающего окна посе завершения матча
+  requirement: |
+    При выборе кнопки "Х" должно закрыться окно
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Give up"
+  steps:
+    - Кнопка флажок
+    - Кнопка "Give up"
+    - Кнопка "Х"
+  expected-result: |
+    Должено закрыться окно подтверждающее поражение
+
+- summary: |
+    Проверка кнопки "Give up" после завершения матча
+  requirement: |
+    При выборе кнопки "Give up" не должна быть возможность ее нажать
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Give up"
+  steps:
+    - Кнопка флажок
+    - Кнопка "Give up"
+    - Кнопка "Х"
+    - Кнопка флажок
+  expected-result: |
+    Эта кнопка должна быть не функциональная в этот момент
+    
+- summary: |
+    Проверка возможности отказаться от сдаться сопернику 
+  requirement: |
+    При выборе кнопки Give up" (флашка) должно появиться окно с поддверждением для завершения игры
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Cancel"
+  steps:
+    - Кнопка флажок
+    - Кнопка "Cancel"
+  expected-result: |
+    Должена продолжиться игра
+
+- summary: |
+    Проверка возможности сбросить написаный код на начальный 
+  requirement: |
+    При выборе кнопки "Reset editor" должен сделать сброс написаного кода на начальный уровень
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Reset editor"
+  steps:
+    - Кнопка "Reset editor"
+  expected-result: |
+    Должно окно для написания кода отчиститься до начального
+
+- summary: |
+    Проверка на возможность проверить свое решение
+  requirement: |
+    При выборе кнопки "Check solution" должен проверить твое решение и выдать ответ (Правильно или нет)
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Check solution"
+  steps:
+    - Кнопка "Check solution"
+  expected-result: |
+    Должено быть проверино твое решение 
+
+- summary: |
+    Проверка на возможность проверить свое решение при нажатии кнопок Ctrl+Enter
+  requirement: |
+    При нажатии кнопок "Ctrl+Enter" должено быть проверино твое решение и выдать ответ (Правильно или нет)
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопки "Ctrl+Enter"
+  steps:
+    - Кнопки "Ctrl+Enter"
+  expected-result: |
+    Должено быть проверино твое решение 
+
+- summary: |
+    Проверка на возможность посмотреть ход поединка от начала и до конца
+  requirement: |
+    При нажатии кнопоки "Open History" должен открыться плеер для просмотра поединка от начала и до конца
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Open History"
+  steps:
+    - Кнопка "Open History"
+  expected-result: |
+    Долженен открыться плеер для просмотра поединка
+
+- summary: |
+    Проверка работы плеера при просмотре записи поединка 
+  requirement: |
+    При нажатии кнопоки "Play" должен начаться просмотр записи, при нажатии "Pause" сделать паузу
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Play"
+    Кнопка "Pause"
+  steps:
+    - Кнопка "Open History"
+    - Кнопка "Play"
+    - Кнопка "Pause"
+  expected-result: |
+    Должен плеер показывать запись и при нажатии паузы остановиться
+
+- summary: |
+    Проверка возможности плеера ускорить воспроизведении записи в 2 раза 
+  requirement: |
+    При нажатии кнопоки "2х" должен начаться просмотр записи в 2 раза быстрее
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "2х"
+  steps:
+    - Кнопка "Open History"
+    - Кнопка "2х"
+    - Кнопка "Play"
+  expected-result: |
+    Долженен плеер показывать видео в 2 раза быстрее
+
+- summary: |
+    Проверка возможности вернуться на главную страницу
+  requirement: |
+    При нажатии кнопоки "Back to home" должен вернуться на главную страницу
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Back to home"
+  steps:
+    - Кнопка "Back to home"
+  expected-result: |
+    Долженен вернуться на главную страницу
+
+- summary: |
+    Проверка возможности вернуться на главную страницу
+  requirement: |
+    При нажатии кнопоки "Continue" должен вернуться на продолжение совей битвы
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Continue"
+  steps:
+    - Кнопка "Back to home"
+    - Кнопка "Continue"
+  expected-result: |
+    Долженен вернуться на страницу где можно продолжить свою битву
+
+- summary: |
+    Проверка возможности переиграть завершившуюся игру
+  requirement: |
+    При нажатии кнопоки "Rematch" должен начаться поединок заного с той же задачей
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Rematch"
+  steps:
+    - Кнопка "Rematch"
+  expected-result: |
+    Долженен начаться матч заного с той же задачей 
+
+- summary: |
+    Проверка отправки сообщения в чате поединка
+  requirement: |
+    При нажатии кнопоки "Send" должено отправиться напечатаное сообщение в закрытый чат поединка
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Кнопка "Send"
+  steps:
+    - Написать текст "Good luck"
+    - Выбрать смайлик "Objects/Glasses"
+    - Кнопка "Send"
+  expected-result: |
+    Должено отправиться сообщение в чат "Good luck" со смайликом очков
+
+- summary: |
+    Проверка отображения победителя поединка 
+  requirement: |
+    При завершении матча должно показать победителя
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Завершен поединок с соперником
+  test-data: |
+    Оповещение кто победитель
+  expected-result: |
+    Должно отображаться сообщение с победителем матча
+
+- summary: |
+    Просмотр краткого описание участника
+  requirement: |
+    Когда наводится курсор на ник, выдается его краткая статистика 
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок с соперником
+  test-data: |
+    Выдача статистики
+   steps:
+    - Навести курсор на ник
+  expected-result: |
+    Должно отображаться сообщение с его статистикой
+    
+- summary: |
+   Проверить возможность присоедениться к туриниру в разделе "Live tournaments" 
+  requirement: |
+   При нажатии на кнопку "Join" можно принять участие в турнире
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Join"
+  steps: |
+    - Кнопка "Show"
+    - Кнопка "Join"
+  expected-result: |
+    Должен быть зарегистрирован для участия на этом турнире
+
+- summary: |
+   Проверить возможность присоедениться к туриниру в разделе "Live tournaments" 
+  requirement: |
+   При нажатии на кнопку "Leave" можно отказаться от участия в турнире
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Leave"
+  steps: |
+    - Кнопка "Show"
+    - Кнопка "Join"
+    - Кнопка "Leave"
+  expected-result: |
+    Должна быть отменена регистрация для участия на этом турнире 
+
+- summary: |
+   Проверить возможность посмотреть турниры идущие в реальном времени в разделе "Live tournaments"
+  requirement: |
+   При нажатии на кнопку "Show" можно открыть идущий турнир
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Show"
+  steps: |
+    - Кнопка "Show"
+  expected-result: |
+    Должна быть открыта страница выбранного турнира
+
+- summary: |
+   Проверить возможность посмотреть раунд в прошедшем турнире в разделе "Completed tournaments"
+  requirement: |
+   При нажатии на кнопку "Show" в "Round 2" между парами можно посмотреть дуэль
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Show"
+  steps: |
+    - Кнопка "Show"
+    - Кнопка "Show"
+    - Кнопка "Play"
+  expected-result: |
+    Должно начаться повтор их сражания
+
+- summary: |
+   Проверить возможность написать в чат
+  requirement: |
+   При написании сообщения "Hello, World!, just testing." и нажатии на "Send" должно отправиться в общий чат
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Send"
+  steps: |
+    - Напечатать "Hello, World!, just testing."
+    - Кнопка "Send"
+  expected-result: |
+    Должно отправиться в общий чат
+
+- summary: |
+   Проверить возможность зайти в раздел информации турниров
+  requirement: |
+   При нажатии на кнопку "Tournaments info" должно перейти на страницу с информацией туринров
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Tournaments info"
+  steps: |
+    - Кнопка "Tournaments info"
+  expected-result: |
+    Должно перейти на страницу с информацией туринров
+
+- summary: |
+   Проверить возможность создать новый турнир 
+  requirement: |
+   При нажатии на кнопку "Create" должен создаться новый турнир с введенными критериями
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Create"
+  steps: |
+    - Кнопка "Tournaments info"
+    - Кнопка "Create"
+  expected-result: |
+    Должен начаться новый турир
+
+- summary: |
+   Проверить отображение на странице созданного турира
+  requirement: |
+   При нажатии на кнопку "Create" должен отобразиться туринр в Live tournaments
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Отображение в Live tournaments
+  steps: |
+    - Кнопка "Tournaments info"
+    - Кнопка "Create"
+    - Кнопка "Логотип сайта"
+    - Кнопка "Tournaments"
+  expected-result: |
+    Должен увидеть свой созданный турин
+
+- summary: |
+   Возможность сделать изменения в турнире 
+  requirement: |
+   При нажатии на кнопку "Edit" должна появиться возможность сделать изменения правил в созданном турнире 
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Edit"
+  steps: |
+    - Кнопка "Show"
+    - Кнопка "Edit"
+  expected-result: |
+    Должна открыться cтраница с возможностью  поменять правила 
+
+- summary: |
+   Не делать изменения в турнире 
+  requirement: |
+   При нажатии на кнопку "Back to tournament" должна появиться возможность сделать изменения правил в созданном турнире 
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Back to tournament"
+  steps: |
+    - Кнопка "Show"
+    - Кнопка "Edit"
+    - Кнопка "Back to tournament"
+  expected-result: |
+    Должна открыться страница турнира без изменений
+
+- summary: |
+   Сделать изменения в турнире 
+  requirement: |
+   При нажатии на кнопку "Update" должна появиться возможность сделать изменения правил в созданном турнире 
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Update"
+  steps: |
+    - Кнопка "Show"
+    - Кнопка "Edit"
+    - Дата "29.10.2023"
+    - Кнопка "Update"
+  expected-result: |
+    Должна поменяться дата проведения турнира
+
+- summary: |
+   Сделать рестарт к первым созданным параметрам тринра
+  requirement: |
+   При нажатии на кнопку "Restart" должны все параметры вернуться в созданным изначально
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Restart"
+  steps: |
+    - Кнопка "Show"
+    - Кнопка "Restart"
+  expected-result: |
+    Должны вернуться настройки изначально созданного турнира
+
+- summary: |
+   Удалить созданный турнир
+  requirement: |
+   При нажатии на кнопку "Cancel" должны все параметры вернуться в созданным изначально
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Tournaments"
+  test-data: |
+    Кнопка "Cancel"
+  steps: |
+    - Кнопка "Show"
+    - Кнопка "Cancel"
+  expected-result: |
+    Должен удалиться мною созданный турнир
+
+- summary: |
+   Проверить возможномть создавать турнир без имени
+  requirement: |
+   При создании турнира с пустым именем должен не разрешить это сделать
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Create a new tournament"
+  test-data: |
+    Раздел "Name"
+  steps: |
+    - Удалить текст с "Name"
+    - Кнопка "Create"
+  expected-result: |
+    Должен предупредить, что поле имени не должно быть пустым и не создать турнир
+
+- summary: |
+   Проверить возможномть создавать турнир в прошлом
+  requirement: |
+   При создании турнира в прошлом должен не разрешить это сделать
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Create a new tournament"
+  test-data: |
+    Раздел "Starts at (Europe/Tallinn)"
+  steps: |
+    - Дата "20.03.2019 15:15"
+    - Кнопка "Create"
+  expected-result: |
+    Должен предупредить, что турнир должен проходить в будущем и не создать его
+
+- summary: |
+   Проверить возможномть создавать турнир в прошлом
+  requirement: |
+   При создании турнира в прошлом должен не разрешить это сделать
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Открыт раздел "Create a new tournament"
+  test-data: |
+    Раздел "Starts at (Europe/Tallinn)"
+  steps: |
+    - Дата "20.03.2019 15:15"
+    - Кнопка "Create"
+  expected-result: |
+    Должен предупредить, что турнир должен проходить в будущем и не создать его
