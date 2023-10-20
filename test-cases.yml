@@ -1210,7 +1210,7 @@
 - summary: |
    Проверить работу кнопки "Create a game"
   requirement: |
-   При создании игры нажать на кнопку "Create a game"
+   Для создания игры нажать на кнопку "Create a game"
   prerequisites: |
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
