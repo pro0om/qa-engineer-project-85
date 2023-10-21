@@ -1221,3 +1221,158 @@
   expected-result: |
     Должно открыться окно для введения сложности и типа игры
 
+- summary: |
+   Проверка возможность приглашать друга на поединок
+  requirement: |
+   При использованние "With a friend" должно быть отправленно приглашение другу 
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    Кнопка "With a friend"
+  steps: |   
+    - Кнопка "Create a game"
+    - Кнопка "With a friend"
+    - Ник pr0m.
+  expected-result: |
+    Должно отправиться приглашение на участие в поединке на ник pr0m.
+
+- summary: |
+   Проверка возможности начать игру по приглашению
+  requirement: |
+   При нажатии на кнопку "Accept" в приглашение на поединок, должна начаться дуэль
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    Кнопка "Accept"
+  steps: |   
+    - Кнопка "Accept"
+  expected-result: |
+    Должна начаться дуэль
+
+- summary: |
+   Проверка возможности отказаться от игры по приглашению
+  requirement: |
+   При нажатии на кнопку "Decline" в приглашение на поединок, дуэль должна не состояться
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    Кнопка "Decline"
+  steps: |   
+    - Кнопка "Decline"
+  expected-result: |
+    Дуэль должна быть отменена
+
+- summary: |
+   Проверка возможности создать игру с ботом
+  requirement: |
+   При нажатии на кнопку "Create battle" должен начаться поединок с ботом
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    Кнопка "Create battle"
+  steps: |   
+    - Кнопка "Create a game"
+    - Выбрать "Level 3"
+    - Выбрать "With a bot"
+    - Выбрать "Time control 38"
+    - Выбрать "Choose task by name or tags - random"
+    - Выбрать "Tags - math, string"
+    - Кнопка "Create battle"
+  expected-result: |
+    Должен сразу начаться поединок с ботом и соответсвовать выбранным характеристикам
+
+- summary: |
+   Проверка возможности создать игру с другими игроками
+  requirement: |
+   При выборе категории "With others users" должна создаться игра с любыми игроком, кто захочет принять участие
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    Кнопка "With others users"
+  steps: |   
+    - Кнопка "Create a game"
+    - Кнопка "With others users"
+    - Кнопка "Create battle"
+  expected-result: |
+    Должна создаться игра, которая будет ждать соперника для принямия в ней участие
+
+- summary: |
+   Проверка возможности отменить игру с другими игроками
+  requirement: |
+   При нажатии на кнопку "X" где отображается имя "Cancel game" игра должна быть отменена
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    Кнопка "X"    
+  steps: |   
+    - Кнопка "Create a game"
+    - Кнопка "With others users"
+    - Кнопка "Create battle"
+    - Кнопка "X"
+  expected-result: |
+    Созданная игра должна быть удалена
+
+- summary: |
+   Проверка возможности копировать ссылку на игру с другими игроками
+  requirement: |
+   При нажатии на кнопку "Copy link" должна быть копирована ссылка на этот поединок
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    Кнопка "Copy link"
+  steps: |   
+    - Кнопка "Create a game"
+    - Кнопка "With others users"
+    - Кнопка "Create battle"
+    - Кнопка "Copy link"
+  expected-result: |
+    Ссылка для возможности присоедениться к этому поединку должна быть скопирована
+
+- summary: |
+   Проверка возможности подключиться к поединку через ссылку
+  requirement: |
+   При нажатии на кнопку "Join" должен начаться поединок с соперником 
+  prerequisites: |   
+    Зайти через ссылку типа - https://codebattle.hexlet.io/games/156334/  (Google Chrome Версия 118.0.5993.88)
+  test-data: |
+    Кнопка "Join"
+  steps: |   
+    - Кнопка "Join"
+  expected-result: |
+    Ссылка для возможности присоедениться к этому поединку должна быть скопирована
+
+- summary: |
+   Проверка возможности продолжить поединок
+  requirement: |
+   При нажатии на кнопку "Continue" должна загрузиться игра в которой идет поединок
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+    Начат поединок 
+  test-data: |
+    Кнопка "Continue"
+  steps: |   
+    - Кнопка "Логотип Hexlet Codebattle"
+    - Кнопка "Continue"
+  expected-result: |
+    Должен вернуться на свой начатый поединок
+
+- summary: |
+   Проверка уведомлений при получении приглошения на поединок
+  requirement: |
+   Если был приглашон на поединок другим игроком, должно быть уведомление
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Произведен вход на аккаунт
+  test-data: |
+    Увидомление на логотипе "Мечи"  
+  expected-result: |
+    Должена появиться цифра на Логотипе, обозначающая количество имеющихся приглошений
+    
