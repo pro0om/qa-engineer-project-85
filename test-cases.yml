@@ -848,7 +848,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Join"
-  steps: |
+  steps: 
     - Кнопка "Show"
     - Кнопка "Join"
   expected-result: |
@@ -994,7 +994,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Back to tournament"
-  steps: |
+  steps: 
     - Кнопка "Show"
     - Кнопка "Edit"
     - Кнопка "Back to tournament"
@@ -1260,7 +1260,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "Decline"
-  steps:    
+  steps: 
     - Кнопка "Decline"
   expected-result: |
     Дуэль должна быть отменена
@@ -1274,7 +1274,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "Create battle"
-  steps:    
+  steps: 
     - Кнопка "Create a game"
     - Выбрать "Level 3"
     - Выбрать "With a bot"
@@ -1294,7 +1294,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "With others users"
-  steps:    
+  steps: 
     - Кнопка "Create a game"
     - Кнопка "With others users"
     - Кнопка "Create battle"
@@ -1310,7 +1310,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "X"    
-  steps:   
+  steps: 
     - Кнопка "Create a game"
     - Кнопка "With others users"
     - Кнопка "Create battle"
@@ -1327,7 +1327,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "Copy link"
-  steps:   
+  steps: 
     - Кнопка "Create a game"
     - Кнопка "With others users"
     - Кнопка "Create battle"
@@ -1343,7 +1343,7 @@
     Зайти через ссылку типа - https://codebattle.hexlet.io/games/156334/  (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Кнопка "Join"
-  steps:    
+  steps: 
     - Кнопка "Join"
   expected-result: |
     Ссылка для возможности присоедениться к этому поединку должна быть скопирована
@@ -1358,7 +1358,7 @@
     Начат поединок 
   test-data: |
     Кнопка "Continue"
-  steps:   
+  steps: 
     - Кнопка "Логотип Hexlet Codebattle"
     - Кнопка "Continue"
   expected-result: |
