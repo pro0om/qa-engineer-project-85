@@ -864,7 +864,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Leave"
-  steps: |
+  steps: 
     - Кнопка "Show"
     - Кнопка "Join"
     - Кнопка "Leave"
@@ -881,7 +881,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Show"
-  steps: |
+  steps: 
     - Кнопка "Show"
   expected-result: |
     Должна быть открыта страница выбранного турнира
@@ -896,7 +896,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Show"
-  steps: |
+  steps: 
     - Кнопка "Show"
     - Кнопка "Show"
     - Кнопка "Play"
@@ -913,7 +913,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Send"
-  steps: |
+  steps: 
     - Напечатать "Hello, World!, just testing."
     - Кнопка "Send"
   expected-result: |
@@ -929,7 +929,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Tournaments info"
-  steps: |
+  steps: 
     - Кнопка "Tournaments info"
   expected-result: |
     Должно перейти на страницу с информацией туринров
@@ -944,7 +944,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Create"
-  steps: |
+  steps: 
     - Кнопка "Tournaments info"
     - Кнопка "Create"
   expected-result: |
@@ -960,7 +960,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Отображение в Live tournaments
-  steps: |
+  steps: 
     - Кнопка "Tournaments info"
     - Кнопка "Create"
     - Кнопка "Логотип сайта"
@@ -978,7 +978,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Edit"
-  steps: |
+  steps: 
     - Кнопка "Show"
     - Кнопка "Edit"
   expected-result: |
@@ -1011,7 +1011,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Update"
-  steps: |
+  steps: 
     - Кнопка "Show"
     - Кнопка "Edit"
     - Дата "29.10.2023"
@@ -1029,7 +1029,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Restart"
-  steps: |
+  steps: 
     - Кнопка "Show"
     - Кнопка "Restart"
   expected-result: |
@@ -1045,7 +1045,7 @@
     Открыт раздел "Tournaments"
   test-data: |
     Кнопка "Cancel"
-  steps: |
+  steps: 
     - Кнопка "Show"
     - Кнопка "Cancel"
   expected-result: |
@@ -1061,7 +1061,7 @@
     Открыт раздел "Create a new tournament"
   test-data: |
     Раздел "Name"
-  steps: |
+  steps: 
     - Удалить текст с "Name"
     - Кнопка "Create"
   expected-result: |
@@ -1077,7 +1077,7 @@
     Открыт раздел "Create a new tournament"
   test-data: |
     Раздел "Starts at (Europe/Tallinn)"
-  steps: |
+  steps: 
     - Дата "20.03.2019 15:15"
     - Кнопка "Create"
   expected-result: |
@@ -1093,7 +1093,7 @@
     Открыт раздел "Create a new tournament"
   test-data: |
     Раздел "Elementary"
-  steps: |
+  steps: 
     - Ввести " 0 "
     - Кнопка "Create"
     - Ввести " 1001 "
@@ -1111,7 +1111,7 @@
     Открыт раздел "Create a new tournament"
   test-data: |
     Раздел "Easy"
-  steps: |
+  steps: 
     - Ввести " 0 "
     - Кнопка "Create"
     - Ввести " 1001 "
@@ -1129,7 +1129,7 @@
     Открыт раздел "Create a new tournament"
   test-data: |
     Раздел "Medium"
-  steps: |
+  steps: 
     - Ввести " 0 "
     - Кнопка "Create"
     - Ввести " 1001 "
@@ -1147,7 +1147,7 @@
     Открыт раздел "Create a new tournament"
   test-data: |
     Раздел "Hard"
-  steps: |
+  steps: 
     - Ввести " 0 "
     - Кнопка "Create"
     - Ввести " 1001 "
@@ -1165,7 +1165,7 @@
     Открыт раздел "Create a new tournament"
   test-data: |
     Раздел "Match timeout sec"
-  steps: |
+  steps: 
     - Ввести " 10 "
     - Кнопка "Create"
     - Ввести " 1001 "
@@ -1183,7 +1183,7 @@
     Открыт раздел "Create a new tournament"
   test-data: |
     Раздел "Break duration sec"
-  steps: |
+  steps: 
     - Ввести " 0 "
     - Кнопка "Create"
     - Ввести " 358 "
@@ -1201,7 +1201,7 @@
     Открыт раздел "Create a new tournament"
   test-data: |
     Разные характеристики
-  steps: |   
+  steps:   
     - Ввести разнообразные дозволеные данные
     - Кнопка "Create"
   expected-result: |
@@ -1216,7 +1216,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "Create a game"
-  steps: |   
+  steps:    
     - Кнопка "Create a game"
   expected-result: |
     Должно открыться окно для введения сложности и типа игры
@@ -1230,7 +1230,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "With a friend"
-  steps: |   
+  steps:   
     - Кнопка "Create a game"
     - Кнопка "With a friend"
     - Ник pr0m.
@@ -1246,7 +1246,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "Accept"
-  steps: |   
+  steps: 
     - Кнопка "Accept"
   expected-result: |
     Должна начаться дуэль
@@ -1260,7 +1260,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "Decline"
-  steps: |   
+  steps:    
     - Кнопка "Decline"
   expected-result: |
     Дуэль должна быть отменена
@@ -1274,7 +1274,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "Create battle"
-  steps: |   
+  steps:    
     - Кнопка "Create a game"
     - Выбрать "Level 3"
     - Выбрать "With a bot"
@@ -1294,7 +1294,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "With others users"
-  steps: |   
+  steps:    
     - Кнопка "Create a game"
     - Кнопка "With others users"
     - Кнопка "Create battle"
@@ -1310,7 +1310,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "X"    
-  steps: |   
+  steps:   
     - Кнопка "Create a game"
     - Кнопка "With others users"
     - Кнопка "Create battle"
@@ -1327,7 +1327,7 @@
     Произведен вход на аккаунт
   test-data: |
     Кнопка "Copy link"
-  steps: |   
+  steps:   
     - Кнопка "Create a game"
     - Кнопка "With others users"
     - Кнопка "Create battle"
@@ -1343,7 +1343,7 @@
     Зайти через ссылку типа - https://codebattle.hexlet.io/games/156334/  (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Кнопка "Join"
-  steps: |   
+  steps:    
     - Кнопка "Join"
   expected-result: |
     Ссылка для возможности присоедениться к этому поединку должна быть скопирована
@@ -1358,7 +1358,7 @@
     Начат поединок 
   test-data: |
     Кнопка "Continue"
-  steps: |   
+  steps:   
     - Кнопка "Логотип Hexlet Codebattle"
     - Кнопка "Continue"
   expected-result: |
