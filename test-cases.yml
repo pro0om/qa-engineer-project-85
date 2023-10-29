@@ -7,7 +7,7 @@
     Должны быть установлены браузеры Google Chrome, Microsoft Edge, Mozila Firefox, Safari
   test-data: |
     https://codebattle.hexlet.io/
-  steps: |
+  steps: 
     - Вводим адрес в Google Chrome
     - Вводим адрес в Microsoft Edge
     - Вводим адрес в Mozila Firefox
@@ -23,7 +23,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Логин = pro0o Пароль = QwertY123 email = neruski@hot.ee
-  steps: |
+  steps: 
     - Нажимаем кнопку "Sign Up"
     - Вводим логин
     - Вводим email
@@ -41,7 +41,7 @@
   test-data: |
     Тестовые данные
     Логин = neruski@hot.ee Пароль = QwertY123
-  steps: |
+  steps: 
     - Вводим email
     - Вводим пароль
     - Нажимаем кнопку "Submit"
@@ -57,7 +57,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     кнопка "Sign Out"
-  steps: |
+  steps: 
     - Нажимаем на свой ник (В правом верхнем углу)
     - Нажимаем "Sign Out"
   expected-result: |
@@ -71,7 +71,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Логин = pro@hot.ee Пароль = qwerty
-  steps: |
+  steps: 
     - Вводим email
     - Вводим пароль
     - Нажимаем кнопку «Submit»
@@ -86,7 +86,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Кнопка "Sing in with GitHub"
-  steps: |
+  steps: 
     - Нажимаем кнопку "Sing in with GitHub"
   expected-result: |
     Пользователь должен попасть на главную страницу
@@ -99,7 +99,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Кнопка "Sing in with Discord"
-  steps: |
+  steps: 
     - Нажимаем кнопку "Sing in with Discord"
   expected-result: |
     Пользователь должен попасть на главную страницу
@@ -112,7 +112,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Кнопка "Try simple battle"
-  steps: |
+  steps: 
     - Нажимаем кнопку "Try simple battle"
   expected-result: |
     Пользователь должен попасть в режим игры с компьютером без регистрации
@@ -125,7 +125,7 @@
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
     Логотип "Codebattle by Hexlet's community"
-  steps: |
+  steps: 
     - Нажимаем кнопку "Try simple battle"
     - Надимаем логотип "Codebattle by Hexlet's community"
   expected-result: |
@@ -140,7 +140,7 @@
     Произведен вход на аккаунт
   test-data: |
     кнопки "WEEK/MONTH/ALL"
-  steps: |
+  steps: 
     - Нажимаем кнопку "WEEK"
     - Нажимаем кнопку "MONTH"
     - Нажимаем кнопку "ALL"
