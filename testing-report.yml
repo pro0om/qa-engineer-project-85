@@ -91,7 +91,7 @@
     Проверка возможности на "TOP list" перейти на конкретный аккаунт
   status: pass
 
- - summary: |
+- summary: |
     Проверка возможности попасть в "My Profily" 
   status: pass
 
