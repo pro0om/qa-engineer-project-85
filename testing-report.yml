@@ -269,11 +269,11 @@
 
 - summary: |
    Проверить запрет на создание турнира без имени
- status: pass
+  status: pass
 
 - summary: |
    Проверить возможномть не давать создавать турнир в прошлом
- status: fail
+  status: fail
 
 - summary: |
    Проверить границы "Elementary"
@@ -285,7 +285,7 @@
   
 - summary: |
    Проверить границы "Medium"
- status: pass
+  status: pass
 
 - summary: |
    Проверить границы "Hard"
@@ -305,7 +305,7 @@
 
 - summary: |
    Проверить работу кнопки "Create a game"
- status: pass
+  status: pass
 
 - summary: |
    Проверка возможность приглашать друга на поединок
@@ -321,7 +321,7 @@
 
 - summary: |
    Проверка возможности создать игру с ботом
- status: pass
+  status: pass
 
 - summary: |
    Проверка возможности создать игру с другими игроками
