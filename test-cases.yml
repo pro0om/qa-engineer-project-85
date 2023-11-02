@@ -84,6 +84,7 @@
     При нажатии на кнопку "Sing in with GitHub" должен зайти на зайт с этим аккаунтом
   prerequisites: |
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Должен быть зарегистрированный аккаунт на GitHub
   test-data: |
     Кнопка "Sing in with GitHub"
   steps: 
@@ -97,6 +98,7 @@
     При нажатии на кнопку "Sing in with Discord" должен зайти на зайт с этим аккаунтом
   prerequisites: |
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
+    Должен быть зарегистрированный аккаунт на Discord
   test-data: |
     Кнопка "Sing in with Discord"
   steps: 
