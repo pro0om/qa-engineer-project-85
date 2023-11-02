@@ -22,7 +22,7 @@
   prerequisites: |
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
   test-data: |
-    Логин = pro0o Пароль = QwertY123 email = neruski@hot.ee
+    Логин = Вводим новый  Пароль = Вводим новый email = Вводим новый
   steps: 
     - Нажимаем кнопку "Sign Up"
     - Вводим логин
