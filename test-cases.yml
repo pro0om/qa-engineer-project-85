@@ -14,6 +14,46 @@
     - Вводим адрес в Safari
   expected-result: |
     Должна открыться страница во всех браузерах
+
+- summary: |
+    Проверка работы на Microsoft Edge
+  requirement: |
+    На Microsoft Edge главный функционал должен работать
+  prerequisites: |
+    Должны быть установлены браузер  Microsoft Edge    
+    Должен быть свой аккаунт GitHub/Discord
+  test-data: |
+    https://codebattle.hexlet.io/
+  steps: 
+    - Вводим адрес в Microsoft Edge
+    - Нажимаем "Sign in"
+    - Нажимаем "Sign in with GitHub" 
+    - Нажимаем "Create a game"
+    - Нажимаем "Create battle"
+    - Нажимаем "Give Up"
+    - Нажимаем "Back to home"
+    - Нажимаем на свой аккаунт
+    - Нажимаем "Settings"
+    - Меняем ник и оружие, выбираем вариант звука и ее громкость
+    - Нажимаем "Save"
+    - Нажимаем на логотип в левом верхнем углу
+    - Нажимаем "Tournaments"
+    - Нажимаем "Tournaments info"
+    - Нажимаем "Create" (Кнопка снизу - для создания своего туринира)
+    - Нажимаем "Join"
+    - Нажимаем "Start"
+    - Нажимаем "Open" (На всплывшем окне после кнопки Start)
+    - Нажимаем "Back to tournament"
+    - Нажимаем "Restart" 
+    - Нажимаем На свой Ник
+    - Нажимаем "My profile"
+    - Нажимаем "Complete games"
+    - Нажимаем "Show"
+    - Нажимаем на ник соперника
+    - Нажимаем На свой Ник
+    - Нажимаем "Sign Out"
+  expected-result: |
+    Должны пройти по всем шагам без сбоев
     
 - summary: |
     Проверка регистриции
