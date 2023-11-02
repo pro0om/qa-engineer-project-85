@@ -363,17 +363,17 @@
     Должен перейти на страницу "My Profile" аккаунта "pro0om"
 
 - summary: |
-    Проверка возможности попасть в "My Profily" 
+    Проверка возможности попасть в "My Profile" 
   requirement: |
-    При нажатии "My Profily" должен перейти на профиль аккаунт
+    При нажатии "My Profile" должен перейти на профиль аккаунт
   prerequisites: |
     Открыта страница https://codebattle.hexlet.io/ (Google Chrome Версия 118.0.5993.88)
     Произведен вход на аккаунт
   test-data: |
-    Кнопка "My Profily"
+    Кнопка "My Profile"
   steps:
     - Нажимаем на свой ник (В правом верхнем углу)
-    - Нажимаем "My Profily"
+    - Нажимаем "My Profile"
   expected-result: |
     Должен перейти на страницу "My Profile" аккаунта 
 
